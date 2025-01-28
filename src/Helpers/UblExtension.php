@@ -104,7 +104,7 @@ class UblExtension
             'Algorithm' => "http://www.w3.org/2001/04/xmlenc#sha256"
         ]);
 
-        $digestValue->add('ds:DigestValue', base64_encode(hash('sha256', $signedProprietiesXml)));
+        $digestValue->add('ds:DigestValue','SIGNATURE_PROPERTIES_DIGEST_VALUE' );
 
         $signature->add('ds:SignatureValue', $this->digitalSignature);
 

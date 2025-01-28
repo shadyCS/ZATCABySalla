@@ -348,7 +348,6 @@ class UXML
 
         $issueDate = $this->get("cbc:IssueDate")->asText();
         $issueTime = $this->get("cbc:IssueTime")->asText();
-        $issueTime = stripos($issueTime, 'Z') === false ? $issueTime . 'Z' : $issueTime;
 
         $qrArray = [
             new Seller($this->get("cac:AccountingSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName")->asText()), // Seller׳s name
